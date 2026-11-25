@@ -27,10 +27,7 @@ const MovieList = () => {
           {dati_arr.map((dato) => (
         <SingleFilm dato={dato}/>
       ))}
-      </div>
-      
-
-      
+      </div>     
     </div>
   )
   

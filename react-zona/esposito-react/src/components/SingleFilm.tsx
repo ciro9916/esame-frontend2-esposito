@@ -22,11 +22,7 @@ const SingleFilm = ({ dato }: TipoRitorno) => {
     // html preso da index.html della traccia, classi prese dal css originale
     <article className="card">
       <div className="card__poster">
-        <img
-          style={posterStyle}
-          src={`${IMAGE_BASE_URL}${dato.poster_path}`}
-          alt={dato.title}
-        />
+        <img style={posterStyle} src={`${IMAGE_BASE_URL}${dato.poster_path}`} alt={dato.title} />
       </div>
 
       <div className="card__body">

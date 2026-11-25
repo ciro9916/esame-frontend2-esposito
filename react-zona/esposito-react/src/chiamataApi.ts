@@ -9,11 +9,13 @@ export const chiamataApi = async ():Promise<Movie[]> =>{
     return risposta.results
 }
 
-export const chiamataApiDettagli = async ():Promise<MovieDetail> =>{
-    const dati = await fetch("https://api.themoviedb.org/3/search/movie?query=The%20Lord%20of%20the%20Rings&include_adult=false&language=en-US&page=1&api_key="+API_KEY)
-    
-    const risposta = await dati.json()
+export const chiamataApiDettagli = async (id: string): Promise<MovieDetail> => {
+  const dati = await fetch(
+    `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`
+  )
 
-    return risposta
+  const risposta = await dati.json()
+
+  return risposta
 }
 

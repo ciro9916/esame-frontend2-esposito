@@ -1,5 +1,5 @@
-import React from 'react'
 import "../stile.css"
+import { Link } from 'react-router'
 
 const Header = () => {
   return (
@@ -9,7 +9,7 @@ const Header = () => {
             <div className="header__brand">Movie App</div>
             </div>
             <nav className="header__nav">
-            <a href="index.html">Home / Elenco</a>
+            <Link to="/"><a >Home / Elenco</a></Link>
             </nav>
         </header>
     </div>
